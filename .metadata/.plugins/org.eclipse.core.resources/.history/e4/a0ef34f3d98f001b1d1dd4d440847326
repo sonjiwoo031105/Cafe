@@ -1,0 +1,90 @@
+package cafe1;
+
+public class Order {
+	
+	private int drink;
+	private String size;
+	private int temp;
+	private int number;
+	private int where_eat;
+	
+
+	public Order (int drink, String size, int temp, int number, int where_eat) {
+		this.drink = drink;
+		this.size = size;
+		this.temp = temp;
+		this.number = number;
+		this.where_eat = where_eat;
+	}
+
+	
+	public void setChoice_Size(String size) {
+		this.size = size;
+	}
+	public void setHOTorICE(int temp) {
+		this.temp = temp;
+	}
+	public void setChoice_Number(int number) {
+		this.number = number;
+	}
+	public void setChoice_Drink(int drink) {
+		this.drink = drink;
+	}
+	public void setEATINorTAKEOUT(int where_eat) {
+		this.where_eat = where_eat;
+	}
+	
+	
+	public String getChoice_size() {
+		return size;
+	}
+	public int getHOTorICE() {
+		return temp;
+	}
+	public int getChoice_Number() {
+		return number;
+	}
+	public int getChoice_Drink() {
+		return drink;
+	}
+	public int getEATINorTAKEOUT() {
+		return where_eat;
+	}
+	
+	public void Choice_Drink(int drink) {
+		switch(drink) {
+		case 1 : System.out.println("아메리카노입니다."); break;
+		case 2 : System.out.println("카페라떼입니다."); break;
+		case 3 : System.out.println("카푸치노입니다."); break;
+		case 4 : System.out.println("카페모카입니다."); break;
+		case 5 : System.out.println("초코 밀크티입니다."); break;
+		case 6 : System.out.println("타로 밀크티입니다."); break;
+		case 7 : System.out.println("녹차 밀크티입니다."); break;
+		case 8 : System.out.println("흑당 밀크티입니다."); break;
+		}
+	}
+	public void Choice_eat(int where_eat) {
+		if(where_eat == 1) {
+			System.out.println("매장컵으로 준비해 드리겠습니다.");
+		}else if(where_eat == 2) {
+			System.out.println("일회용 컵으로 준비해 드리겠습니다.");
+		}else {
+			System.out.println("숫자를 잘못 입력하셨습니다.");
+		}
+	}
+	public void HOTorICE(int temp) {
+		if(temp == 1) {
+			System.out.print("뜨거운");
+		}else if(temp == 2) {
+			System.out.print("아이스");
+		}else {
+			System.out.println("숫자를 잘못 입력하셨습니다.");
+		}
+	}
+	@Override
+	public String toString() {
+		return "사이즈는 " + size + ", 음료의 갯수는 " + number + "잔이며, ";
+	}
+			
+}
+

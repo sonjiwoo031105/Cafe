@@ -1,0 +1,58 @@
+
+public class AddOrder {
+
+	private String Topping;
+	private int Drink;
+	private int Answer;
+	
+	public AddOrder (String Topping,int drink,int Answer) {
+		this.Topping = Topping;
+		this.Drink = drink;
+		this.Answer = Answer;
+	}
+	
+	public void setAdd_Topping(String Topping) {
+		this.Topping = Topping;
+	}
+	public void setDrink(int drink) {
+		this.Drink = drink;
+	}
+	public void setAnswer(int Answer) {
+		this.Answer = Answer;
+	}
+	
+	
+	
+	public String getAdd_Topping() {
+		return Topping;
+	}
+	public int getDrink() {
+		return Drink;
+	}
+	public int getAnswer() {
+		return Answer;
+	}
+	
+	
+	public void Add_Topping(String Topping,int drink, int Answer) {
+		if(Topping.equals("y") || Topping.equals("Y")) {
+			if(drink == 1 || drink == 2 || drink == 3 || drink == 4) {
+				switch(Answer) {
+				case 1 : System.out.println("커피에 샷추가를 합니다."); break;
+				case 2 : System.out.println("커피에 시럽을 추가합니다."); break;
+				}
+			}
+			else if(drink == 5 || drink == 6 || drink == 7 || drink == 8) {
+				switch(Answer) {
+				case 1 : System.out.println("밀크티에 추가한 펄은 타피오카펄입니다."); break;
+				case 2 : System.out.println("밀크티에 추가한 펄은 치즈폼입니다."); break;
+				case 3 : System.out.println("밀크티에 추가한 펄은 코코넛 젤리입니다."); break;
+				}
+			}
+		}
+		else if(Topping == "n" || Topping == "N") {
+			System.out.println("토핑을 추가하지 않았습니다.");
+		}
+	}
+
+}
