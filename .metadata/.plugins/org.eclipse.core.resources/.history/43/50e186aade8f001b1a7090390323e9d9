@@ -43,7 +43,11 @@ class Payment {
 		this.num = num;
 	}
 
-	public void What_pay(int payway) {		
+	public void What_pay(int payway) {
+		System.out.print("무엇으로 결제하겠습니까? (1.카드/2.현금) : ");
+		
+		payway = scan.nextInt();
+		
 		if(payway == 1) {
 			System.out.println("카드결제입니다.");
 		}
